@@ -6,31 +6,37 @@ import router from './router'
 import {
   Vuetify,
   VApp,
-  VNavigationDrawer,
   VFooter,
   VList,
   VBtn,
   VIcon,
   VGrid,
   VToolbar,
-  transitions
+  transitions,
+  VAvatar,
+  VDivider,
+  VStepper,
+  VCard
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
   components: {
     VApp,
-    VNavigationDrawer,
     VFooter,
     VList,
     VBtn,
     VIcon,
     VGrid,
     VToolbar,
-    transitions
+    transitions,
+    VAvatar,
+    VDivider,
+    VStepper,
+    VCard
   },
   theme: {
-    primary: '#ee44aa',
+    primary: '#E53935',
     secondary: '#424242',
     accent: '#82B1FF',
     error: '#FF5252',

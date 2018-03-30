@@ -13,7 +13,6 @@
 
 <script>
 export default {
-  name: 'avatar',
   data() {
     return {
       avatar: require('@/assets/chris.jpg'),
