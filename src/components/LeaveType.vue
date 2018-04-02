@@ -65,6 +65,7 @@ export default {
   cursor: pointer;
   width: 100%;
   justify-content: center;
+  transition: background-color 0.3s ease-in-out;
   background-color: rgba(0,0,0, 0.7);
 }
 
