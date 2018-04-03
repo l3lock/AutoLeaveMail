@@ -1,24 +1,21 @@
 <template>
-  <v-layout fluid fill-height>
+  <v-container fluid fill-height class="pa-0 ma-0">
+    <v-layout>
+      <v-flex md3 column class="pt-4 pb-2 px-2 dark">
+        <slot name="avatar">
+          <Avatar />
+        </slot>
+      </v-flex>
 
-    <v-layout class="left-bar pt-4 pb-2 py-1 dark">
-      <slot name="avatar">
-        <Avatar />
-      </slot>
+      <v-flex md9 secondary column class="pa-3">
+        <h1 class="mt-4 mb-3 ml-1">Auto Leave</h1>
+        <slot name="step">
+          <Step />
+        </slot>
+      </v-flex>
+
     </v-layout>
-
-    <v-content>
-      <v-container fluid fill-height secondary>
-        <v-layout column>
-          <h1 class="mt-4 mb-3 ml-1">Auto Leave</h1>
-          <slot name="step">
-            <Step />
-          </slot>
-        </v-layout>
-      </v-container>
-    </v-content>
-
-  </v-layout>
+  </v-container>
   
 </template>
 
@@ -33,9 +30,4 @@
   }
 </script>
 
-<style scoped>
-  .left-bar {
-    max-width: 330px;
-  }
-</style>
 

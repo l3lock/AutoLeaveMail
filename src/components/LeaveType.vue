@@ -1,9 +1,10 @@
 <template>
-  <v-layout row class="mb-4">
-    <template v-for="(leaveType, index) in leaveTypes">
-      <v-flex xs4 
+  <v-layout row class="mb-4 m--10">
+    <template v-for="leaveType in leaveTypes">
+      <v-flex 
+        xs5 sm5 md4
+        class="mx-2 my-2"
         :key="leaveType.id"
-        :class="index === 0 ? 'mr-2' : 'mx-2'"
       >
         <v-card ripple>
           <v-card-media
