@@ -28,34 +28,19 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   data () {
     return {
-      leaveTypes: [
-        {
-          id: 1,
-          name: 'Sick',
-          thumbnail: require('@/assets/leaveTypes/SickLeave.jpg')
-        },
-        {
-          id: 2,
-          name: 'Personal',
-          thumbnail: require('@/assets/leaveTypes/PersonalLeave.jpg')
-        },
-        {
-          id: 3,
-          name: 'Annual',
-          thumbnail: require('@/assets/leaveTypes/AnnualLeave.png')
-        }
-      ],
-      leaveTypesSelectID: null,
       selected: undefined,
     }
   },
   methods: {
-    selectTypeOfLeave (id) {
-      this.leaveTypesSelectID = id
-    }
+    ...mapActions(['selectTypeOfLeave'])
+  },
+  computed: {
+    ...mapState(['leaveTypes', 'leaveTypesSelectID'])
   }
 }
 </script>

@@ -9,7 +9,7 @@
       <LeaveType/>
       
       <v-btn color="primary ml-0" @click.native="steps = 2">Continue</v-btn>
-      <v-btn flat>Cancel</v-btn>
+      <v-btn flat @click="clearSelectTypeOfLeave">Cancel</v-btn>
     </v-stepper-content>
     <v-stepper-step step="2" :complete="steps > 2" :editable="steps > 2">Configure analytics for this app</v-stepper-step>
     <v-stepper-content step="2">
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+  import { mapState, mapActions } from 'vuex'
   import LeaveType from '@/components/LeaveType'
   export default {
     data () {
@@ -42,6 +43,12 @@
     },
     components: {
       LeaveType
+    },
+    methods: {
+      // handleClearSelectTypeOfLeave () {
+      //   this.$store.dispatch('clearSelectTypeOfLeave')
+      // },
+      ...mapActions(['clearSelectTypeOfLeave'])
     }
   }
 </script>

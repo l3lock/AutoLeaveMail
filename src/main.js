@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import {
   Vuetify,
   VApp,
@@ -18,6 +19,7 @@ import {
   VStepper,
   VCard
 } from 'vuetify'
+
 import '../node_modules/vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
@@ -46,12 +48,15 @@ Vue.use(Vuetify, {
   }
 })
 
+Vue.use(store)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
