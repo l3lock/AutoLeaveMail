@@ -9,3 +9,9 @@ export default {
   name: 'App',
 }
 </script>
+
+<style>
+.m--10 {
+  margin: -10px
+}
+</style>
