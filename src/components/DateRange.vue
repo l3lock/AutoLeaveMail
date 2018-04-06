@@ -1,6 +1,6 @@
 <template>
   <v-layout column>
-    <v-flex class="pl-3 mb-3">
+    <v-flex class="pl-2 mb-3">
       From:
       <v-chip>{{ formattedChipStartDate }}</v-chip> To:
       <v-chip>{{ formattedChipEndDate }}</v-chip>
@@ -8,7 +8,7 @@
 
     <v-flex row>
       <div class="date-range__pickers">
-        <div class="px-3">
+        <div class="px-2">
           <v-text-field
             v-model="formattedStartDate"
             :label="`Start Date (${format})`"
@@ -26,7 +26,7 @@
             no-title
             @change="onDateRangeChange"/>
         </div>
-        <div class="px-3">
+        <div class="px-2">
           <v-text-field
             v-model="formattedEndDate"
             :label="`End Date (${format})`"
