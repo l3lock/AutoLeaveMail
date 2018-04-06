@@ -17,7 +17,11 @@ import {
   VAvatar,
   VDivider,
   VStepper,
-  VCard
+  VCard,
+  VChip,
+  VSubheader,
+  VDatePicker,
+  VTextField
 } from 'vuetify'
 
 import '../node_modules/vuetify/src/stylus/app.styl'
@@ -35,7 +39,11 @@ Vue.use(Vuetify, {
     VAvatar,
     VDivider,
     VStepper,
-    VCard
+    VCard,
+    VChip,
+    VSubheader,
+    VDatePicker,
+    VTextField
   },
   theme: {
     primary: '#E53935',
