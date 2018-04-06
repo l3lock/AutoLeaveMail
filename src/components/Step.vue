@@ -17,13 +17,25 @@
     </v-stepper-step>
     <v-stepper-content step="2">
 
-      <v-flex xs12 class="mb-4">
-        <v-card color="grey darken-2">
-          <v-card-text>
-            <DateRange :options="dateRangeOptions"/>
-          </v-card-text>
-        </v-card>
-      </v-flex>
+      <v-layout row class="mb-4">
+        <v-flex>
+          <v-card color="grey darken-2">
+            <v-card-text>
+              <DateRange :options="dateRangeOptions"/>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+
+        <v-flex xs6>
+          <v-card color="grey darken-2 ml-2">
+            <v-card-text>
+              <v-flex xs12 class="my-2">
+                <TimeRange/>
+              </v-flex>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+    </v-layout>
 
       <v-btn color="primary ml-0" @click.native="steps = 3">Continue</v-btn>
       <v-btn flat>Cancel</v-btn>
@@ -48,6 +60,7 @@
 
   import LeaveType from '@/components/LeaveType'
   import DateRange from '@/components/DateRange'
+  import TimeRange from '@/components/TimeRange'
 
   export default {
     data () {
@@ -63,7 +76,8 @@
     },
     components: {
       LeaveType,
-      DateRange
+      DateRange,
+      TimeRange
     },
     methods: {
       // handleClearSelectTypeOfLeave () {

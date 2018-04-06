@@ -21,7 +21,9 @@ import {
   VChip,
   VSubheader,
   VDatePicker,
-  VTextField
+  VTimePicker,
+  VTextField,
+  VMenu
 } from 'vuetify'
 
 import '../node_modules/vuetify/src/stylus/app.styl'
@@ -43,7 +45,9 @@ Vue.use(Vuetify, {
     VChip,
     VSubheader,
     VDatePicker,
-    VTextField
+    VTimePicker,
+    VTextField,
+    VMenu
   },
   theme: {
     primary: '#E53935',
